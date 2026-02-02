@@ -1,0 +1,12 @@
+name: abricate
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - abricate=1.2.0
+  - blast>=2.10
+  - any2fasta
+  - perl-bioperl>=1.7
+  - unzip
+  - gzip

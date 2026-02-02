@@ -1,0 +1,19 @@
+name: antismash
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.9
+  - antismash=7.1.0
+  - biopython=1.78
+  - diamond=2.1.8
+  - prodigal=2.6.3
+  - blast=2.12.0
+  - hmmer=3.3.2
+  - meme=4.11.2
+  - pandas
+  - beautifulsoup4
+  - lxml
+  - pyyaml
+  - html5lib

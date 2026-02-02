@@ -1,0 +1,21 @@
+name: prokka
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.12.3
+  - prokka=1.15.6
+  - perl=5.32.1
+  - perl-bioperl=1.7.8
+  - blast=2.16.0
+  - hmmer=3.4
+  - aragorn=1.2.41
+  - barrnap=0.9
+  - infernal=1.1.5
+  - viennarna=2.7.0
+  - bedtools=2.31.1
+  - minced=0.4.2
+  - parallel=20251122
+  - tbl2asn-forever=25.7.2f
+  - openjdk=22.0.1

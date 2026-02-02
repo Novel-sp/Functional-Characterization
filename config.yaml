@@ -1,0 +1,20 @@
+paths:
+  input_dir: "/data/prithvi/NOSE/Characterization_wf/Input" # Change your Input Dir
+  output_dir: "/data/prithvi/NOSE/Characterization_wf/Output" # Change your desired Output Dir
+  # Databases
+  antismash_db: "/data/harippriya/characterisation_github/databases/antismash_db"
+  cog_db_dir: "/data/harippriya/Updated/pcaag/databases/COG_CDD"
+  genomad_db: "/data/harippriya/Updated/pcaag/databases/genomad"
+
+envs:
+  antismash: "envs/antismash.yaml"
+  abricate: "envs/abricate.yaml"
+  prokka: "envs/prokka.yaml"
+  cogclassifier: "envs/cogclassifier.yaml"
+  genomad: "envs/genomad.yaml"
+
+params:
+  threads_high: 50
+  threads_med: 8
+  abricate_databases: ["ncbi", "card", "vfdb", "bacmet2"]
+  cog_db_url: "https://ftp.ncbi.nlm.nih.gov/pub/mmdb/cdd/little_endian/Cdd_LE.tar.gz"
