@@ -1,10 +1,10 @@
 paths:
-  input_dir: "/data/prithvi/NOSE/Characterization_wf/Input" # Change your Input Dir
-  output_dir: "/data/prithvi/NOSE/Characterization_wf/Output" # Change your desired Output Dir
+  input_dir: "/path/to/Input_directory" # Change your Input Dir
+  output_dir: "/path/to/Output_directory" # Change your desired Output Dir
   # Databases
-  antismash_db: "/data/harippriya/characterisation_github/databases/antismash_db"
-  cog_db_dir: "/data/harippriya/Updated/pcaag/databases/COG_CDD"
-  genomad_db: "/data/harippriya/Updated/pcaag/databases/genomad"
+  antismash_db: "/path/to/databases/antismash_db"
+  cog_db_dir: "/path/to/databases/COG_CDD"
+  genomad_db: "/path/to/databases/genomad"
 
 envs:
   antismash: "envs/antismash.yaml"
