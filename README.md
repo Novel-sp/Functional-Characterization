@@ -134,5 +134,6 @@ Citations & resources
 - antiSMASH: secondary metabolite gene cluster identification
 - ABRicate: mass-screening for AMR/virulence genes
 - geNomad: detection of plasmid and phage origins for genomic features
+- 
 Snakemake: Mölder et al. (2021). Sustainable data analysis with Snakemake. F1000Research, 10:33.
 
