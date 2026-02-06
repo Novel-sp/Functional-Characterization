@@ -17,31 +17,6 @@ This workflow helps answer two complementary questions about novel genomes:
   
 COG profiling provides genome-wide functional context and helps prioritize gene families for follow-up.
 
-Quick start — Run Module 5
---------------------------
-Module 5 runs ABRicate, antiSMASH and geNomad and links results with Prokka/COG annotations.
-
-1. Activate the snakemake environment:
-```bash
-   - conda activate snakemake
-```
-2. Run Module 5 (example using 20 cores):
-```bash
-   - snakemake --use-conda --cores 20
-```
-
-Highlights
-----------
-- antiSMASH: identifies biosynthetic gene clusters (BGCs) — NRPS, PKS, hybrid clusters, and other secondary metabolite loci.
-- ABRicate: screens genomes against curated AMR/virulence/metal resistance databases (NCBI, CARD, VFDB, BacMet).
-- geNomad: predicts whether genes of interest are associated with phage or plasmid/mobile elements.
-- Prokka + COGs: standardized gene calling and functional classification across genomes.
-- 
-Notes:
-- Database paths should be configured in the pipeline config (see Configuration).  
-- Only modify input/output directories ; the pipeline will use the configured database paths.  
-- If database paths are not provided, the pipeline can be configured to download required databases automatically to a user-specified location.
-
 Prerequisites
 -------------
 - Conda (for environments used by Snakemake)
@@ -55,16 +30,26 @@ Inputs
   - sample list and input assemblies
   - output directory
   - database paths or download destination
+    
+Configuration
+-------------
+- Provide database paths and sample inputs in `config.yaml` (or the pipeline's config file).  
+- If you already have local copies of databases, point the config to those paths.  
+- If no paths are provided, set a download destination in the config; the pipeline can download required databases automatically to that location.  
+- Modify input/output directories only when necessary and update the config accordingly.
 
+Run Module 5
+--------------------------
+Module 5 runs ABRicate, antiSMASH and geNomad and links results with Prokka/COG annotations.
 
-Outputs
------------------
-Each sample will produce a directory containing:
-- Prokka outputs: `.gff`, `.gbk`, `.faa`, `.ffn` (annotations and protein sequences)
-- COG/functional profile summary: per-genome and aggregated tables (gene counts per COG category)
-- ABRicate reports: tabular summaries per database (CARD, VFDB, BacMet, NCBI)
-- antiSMASH results: HTML summaries and cluster folders with annotated region files
-- geNomad outputs: predictions of phage/plasmid origin, coordinates, and summary tables
+1. Activate the snakemake environment:
+```bash
+   - conda activate snakemake
+```
+2. Run Module 5 (example using 20 cores):
+```bash
+   - snakemake --use-conda --cores 20
+```
 
 ## Pipeline Flow 
 
@@ -91,8 +76,6 @@ geNomad
 
 </div>
 
-
-
 Databases used
 --------------
 ABRicate databases:
@@ -103,12 +86,29 @@ ABRicate databases:
 
 antiSMASH: uses its own curated cluster detection models and domain databases.
 
-Configuration
--------------
-- Provide database paths and sample inputs in `config.yaml` (or the pipeline's config file).  
-- If you already have local copies of databases, point the config to those paths.  
-- If no paths are provided, set a download destination in the config; the pipeline can download required databases automatically to that location.  
-- Modify input/output directories only when necessary and update the config accordingly.
+Outputs
+-----------------
+Each sample will produce a directory containing:
+All tools in this module generate standardized CSV outputs for each analyzed factor.
+- Prokka outputs: `.gff`, `.gbk`, `.faa`, `.ffn` (annotations and protein sequences)
+- COG/functional profile summary: per-genome and aggregated tables (gene counts per COG category)
+- ABRicate reports: tabular summaries per database (CARD, VFDB, BacMet, NCBI)
+- antiSMASH results: HTML summaries and cluster folders with annotated region files
+- geNomad outputs: predictions of phage/plasmid origin, coordinates, and summary tables
+
+
+Highlights
+----------
+- antiSMASH: identifies biosynthetic gene clusters (BGCs) — NRPS, PKS, hybrid clusters, and other secondary metabolite loci.
+- ABRicate: screens genomes against curated AMR/virulence/metal resistance databases (NCBI, CARD, VFDB, BacMet).
+- geNomad: predicts whether genes of interest are associated with phage or plasmid/mobile elements.
+- Prokka + COGs: standardized gene calling and functional classification across genomes.
+  
+Notes:
+- Database paths should be configured in the pipeline config (see Configuration).  
+- Only modify input/output directories ; the pipeline will use the configured database paths.  
+- If database paths are not provided, the pipeline can be configured to download required databases automatically to a user-specified location.
+
 
 Troubleshooting
 ---------------
