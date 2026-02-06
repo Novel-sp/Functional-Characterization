@@ -36,19 +36,7 @@ Highlights
 - ABRicate: screens genomes against curated AMR/virulence/metal resistance databases (NCBI, CARD, VFDB, BacMet).
 - geNomad: predicts whether genes of interest are associated with phage or plasmid/mobile elements.
 - Prokka + COGs: standardized gene calling and functional classification across genomes.
-
-Quick start — Run Module 5
---------------------------
-Module 5 is the stage that runs ABRicate, antiSMASH and geNomad (and ties results back to Prokka / COG annotations).
-
-1. Activate the snakemake environment:
-```bash
-   - conda activate snakemake
-````
-2. Run snakemake for Module 5 (use available compute cores; example uses 20 cores):
-```bash
-   - snakemake --use-conda --cores 20
-```
+- 
 Notes:
 - Database paths should be configured in the pipeline config (see Configuration).  
 - Only modify input/output directories ; the pipeline will use the configured database paths.  
@@ -78,25 +66,32 @@ Each sample will produce a directory containing:
 - antiSMASH results: HTML summaries and cluster folders with annotated region files
 - geNomad outputs: predictions of phage/plasmid origin, coordinates, and summary tables
 
-Pipeline Flow (high-level)
--------------------------
+## Pipeline Flow 
+
+<div align="center">
+
+<pre>
 Genome Assembly
-  ↓
-Prokka annotation (gene models + protein translations)
-  ↓
-COG functional profiling (functional category counts & summaries)
-  ↓
+      ↓
+Prokka annotation
+(Gene models + protein translations)
+      ↓
+COG functional profiling
+(Functional category counts & summary statistics)
+      ↓
 ABRicate
-  - AMR (CARD)
-  - Default (NCBI)
-  - Virulence (VFDB)
-  - Metal/biocide resistance (BacMet)
-  ↓
+(AMR – CARD | Default – NCBI | Virulence – VFDB | Metal/Biocide – BacMet)
+      ↓
 antiSMASH
-  - BGC prediction (NRPS / PKS / hybrid clusters and others)
-  ↓
+(Biosynthetic Gene Clusters: NRPS, PKS, hybrid, others)
+      ↓
 geNomad
-  - Phage & mobile genetic element (MGE) association predictions
+(Phage detection & Mobile Genetic Elements association)
+</pre>
+
+</div>
+
+
 
 Databases used
 --------------
