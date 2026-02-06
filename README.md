@@ -38,15 +38,20 @@ Configuration
 - If no paths are provided, set a download destination in the config; the pipeline can download required databases automatically to that location.  
 - Modify input/output directories only when necessary and update the config accordingly.
 
-Run Module 5
+Step-by-step instruction for running Module 5
 --------------------------
 Module 5 runs ABRicate, antiSMASH and geNomad and links results with Prokka/COG annotations.
 
-1. Activate the snakemake environment:
+1.Clone or download this Module 5 directory:
+
+    git clone https://github.com/Novel-sp/Functional-Characterization.git
+    cd Functional-Characterization/module5  # the directory where the module 5 is located
+
+2.  Activate the snakemake environment:
 ```bash
    - conda activate snakemake
 ```
-2. Run Module 5 (example using 20 cores):
+3. Run Module 5 (example using 20 cores):
 ```bash
    - snakemake --use-conda --cores 20
 ```
