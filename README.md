@@ -1,4 +1,4 @@
-# Functional Characterization Pipeline
+# Module 5 - Functional Characterization 
 Overview
 
 This pipeline performs comprehensive functional characterization of assembled microbial genomes. It integrates structural and functional annotation with targeted scans for biosynthetic and resistance/virulence features, and inspects mobile genetic element associations:
