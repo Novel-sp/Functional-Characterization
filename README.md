@@ -1,4 +1,5 @@
-### Module 5 - Functional Characterization 
+### Module 5 - Functional characterization workflow
+
 Overview
 
 This pipeline performs comprehensive functional characterization of assembled microbial genomes. It integrates structural and functional annotation with targeted scans for biosynthetic and resistance/virulence features, and inspects mobile genetic element associations:
@@ -56,31 +57,6 @@ COG profiling provides genome-wide functional context and helps prioritize gene 
 - Modify input/output directories only when necessary and update the config accordingly.
 
 
-#### Pipeline Flow 
-
-<div align="center">
-
-<pre>
-Genome Assembly
-      ↓
-Prokka annotation
-(Gene models + protein translations)
-      ↓
-COG functional profiling
-(Functional category counts & summary statistics)
-      ↓
-ABRicate
-(AMR – CARD | Default – NCBI | Virulence – VFDB | Metal/Biocide – BacMet)
-      ↓
-antiSMASH
-(Biosynthetic Gene Clusters: NRPS, PKS, hybrid, others)
-      ↓
-geNomad
-(Phage detection & Mobile Genetic Elements association)
-</pre>
-
-</div>
-
 ##### Databases
 
 ABRicate databases:
@@ -109,7 +85,8 @@ All tools in this module generate standardized CSV outputs for each analyzed fac
 - geNomad: predicts whether genes of interest are associated with phage or plasmid/mobile elements.
 - Prokka + COGs: standardized gene calling and functional classification across genomes.
   
-Notes:
+##### Notes:
+
 - Database paths should be configured in the pipeline config (see Configuration).  
 - Only modify input/output directories ; the pipeline will use the configured database paths.  
 - If database paths are not provided, the pipeline can be configured to download required databases automatically to a user-specified location.
