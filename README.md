@@ -109,6 +109,7 @@ All tools in this module generate standardized CSV outputs for each analyzed fac
 
 #### Citations & resources
 
+- [Cogclassifier](https://github.com/moshi4/COGclassifier): A tool for classifying prokaryote protein sequences into COG functional category
 - [Prokka](https://github.com/tseemann/prokka): rapid prokaryotic genome annotation
 - [antiSMASH](https://github.com/antismash): secondary metabolite gene cluster identification
 - [ABRicate](https://github.com/tseemann/abricate): mass-screening for AMR/virulence genes
