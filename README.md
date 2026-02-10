@@ -17,15 +17,15 @@ Module 5 runs ABRicate, antiSMASH and geNomad and links results with Prokka/COG 
 1.Clone or download this Module 5 directory:
 
     git clone https://github.com/Novel-sp/Functional-Characterization.git
-    cd Functional-Characterization/module5  # the directory where the module 5 is located
+    cd Functional-Characterization  # the directory where the module 5 is located
 
 2.  Activate the snakemake environment:
 ```bash
-   - conda activate snakemake
+   conda activate snakemake
 ```
-3. Run Module 5 (example using 20 cores):
+3. Run Module 5:
 ```bash
-   - snakemake --use-conda --cores 20
+   ./Nose_Module5.sh
 ```
 #### Purpose
 
