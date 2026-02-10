@@ -109,10 +109,10 @@ All tools in this module generate standardized CSV outputs for each analyzed fac
 
 #### Citations & resources
 
-- Prokka: rapid prokaryotic genome annotation
-- antiSMASH: secondary metabolite gene cluster identification
-- ABRicate: mass-screening for AMR/virulence genes
-- geNomad: detection of plasmid and phage origins for genomic features
+- [Prokka](https://github.com/tseemann/prokka): rapid prokaryotic genome annotation
+- [antiSMASH](https://github.com/antismash): secondary metabolite gene cluster identification
+- [ABRicate](https://github.com/tseemann/abricate): mass-screening for AMR/virulence genes
+- [geNomad](https://github.com/apcamargo/genomad): detection of plasmid and phage origins for genomic features
   
 Snakemake: Mölder et al. (2021). Sustainable data analysis with Snakemake. F1000Research, 10:33.
 
