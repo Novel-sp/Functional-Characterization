@@ -114,5 +114,5 @@ All tools in this module generate standardized CSV outputs for each analyzed fac
 - [ABRicate](https://github.com/tseemann/abricate): mass-screening for AMR/virulence genes
 - [geNomad](https://github.com/apcamargo/genomad): detection of plasmid and phage origins for genomic features
   
-Snakemake: Mölder et al. (2021). Sustainable data analysis with Snakemake. F1000Research, 10:33.
+[Snakemake](https://snakemake.github.io/): Mölder et al. (2021). Sustainable data analysis with Snakemake. F1000Research, 10:33.
 
